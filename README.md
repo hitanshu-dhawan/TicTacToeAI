@@ -1,1 +1,1 @@
-# TicTacToeAI
+# TicTacToe using Artificial Intelligence
