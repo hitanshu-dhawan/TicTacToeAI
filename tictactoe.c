@@ -185,7 +185,7 @@ int getHumanMove(const int *board) {
 	while(1) {
 
 		scanf("%d",&move);
-    	if(board[move-1] == EMPTY && move >=0 && move <=9)
+		if(board[move-1] == EMPTY && move >=0 && move <=9)
 			break;
 		else
 			printf("try again : ");
@@ -223,43 +223,42 @@ void runGame() {
 	initBoard(board);
 	printBoard(board);
 
-    while(!gameOver) {
+	while(!gameOver) {
 
-        if(side == HUMAN) {
-            //Human Move
-            move = getHumanMove(board);
-            makeMove(board,move,side);
-            printBoard(board);
-        }
-        else {
-            //Computer Move
-            move = getComputerMove(board,side);
-            makeMove(board,move,side);
-            printBoard(board);
-        }
-
-
-        //WIN
-        if(is3inARow(board,side)) {
-            printf("Game Over\n");
-            gameOver = 1;
-            if(side == COMP)
-                printf("Computer Wins\n");
-            else
-                printf("Human Wins\n");
-        }
+		if(side == HUMAN) {
+			//Human Move
+			move = getHumanMove(board);
+			makeMove(board,move,side);
+			printBoard(board);
+		}
+		else {
+			//Computer Move
+			move = getComputerMove(board,side);
+			makeMove(board,move,side);
+			printBoard(board);
+		}
 
 
-        //DRAW
-        if(isBoardFull(board)) {
-            printf("Game Over\n");
-            gameOver = 1;
-            printf("It's a Draw\n");
-        }
+		//WIN
+		if(is3inARow(board,side)) {
+			printf("Game Over\n");
+			gameOver = 1;
+			if(side == COMP)
+				printf("Computer Wins\n");
+			else
+				printf("Human Wins\n");
+		}
 
-        side = !side;
+		//DRAW
+		if(isBoardFull(board)) {
+			printf("Game Over\n");
+			gameOver = 1;
+			printf("It's a Draw\n");
+		}
 
-    }
+		side = !side;
+
+	}
 }
 
 int main(int argc, char *argv[]) {
