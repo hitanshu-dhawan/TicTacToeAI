@@ -182,16 +182,15 @@ int getHumanMove(const int *board) {
 
 	printf("\nEnter your move !!\n\n");
 	int move;
-    while(1) {
+	while(1) {
 
-    	scanf("%d",&move);
-    	
+		scanf("%d",&move);
     	if(board[move-1] == EMPTY && move >=0 && move <=9)
-    		break;
-    	else
-    		printf("try again : ");
-    }
-    return move-1;
+			break;
+		else
+			printf("try again : ");
+	}
+	return move-1;
 }
 
 void runGame() {
@@ -217,12 +216,12 @@ void runGame() {
 	}
 
 	int gameOver = 0;
-    int side = O;
-    int move;
-    int board[N];
+	int side = O;
+	int move;
+	int board[N];
 
-    initBoard(board);
-    printBoard(board);
+	initBoard(board);
+	printBoard(board);
 
     while(!gameOver) {
 
