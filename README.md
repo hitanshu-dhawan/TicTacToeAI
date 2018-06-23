@@ -12,3 +12,6 @@ $ gcc tictactoe.c -o tictactoe
 ```
 $ ./tictactoe
 ```
+
+### See in Action
+<a href="https://youtu.be/pLOUYwLjG5E"><img src="https://github.com/hitanshu-dhawan/TicTacToeAI/blob/master/youtube_icon.png" alt="YouTube Video"  width="80px" /></a>
